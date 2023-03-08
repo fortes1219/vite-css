@@ -42,3 +42,35 @@ main {
         color: #3A7A3B;
     }
 }
+
+aside {
+    ul.card-list {
+        list-style: none;
+        padding: 0;
+        li {
+            float: left;
+            width: 30%;
+            margin-bottom: 5%;
+            margin-right: 5%;
+            padding: 1rem;
+            background-color: #333;
+            border: 1px solid #666;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            img {
+                width: 100%;
+            }
+            &:nth-child(3n),
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        &.card-list::before,
+        &.card-list::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+    
+}
