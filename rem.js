@@ -1,5 +1,5 @@
 function setRootFontSize(doc, win) {
-  const clientWidth = doc.documentElement.clientWidth;
+  const clientWidth = win.innerWidth || doc.documentElement.clientWidth;
   if (!clientWidth) return;
 
   // Check if the device is a PC
@@ -19,3 +19,4 @@ function setRootFontSize(doc, win) {
 }
 
 export default setRootFontSize;
+
